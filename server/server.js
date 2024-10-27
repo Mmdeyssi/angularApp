@@ -77,7 +77,7 @@ app.post("/clothes", (req,res)=>{
     })
   })
 })
-app.put("/clothes/:id", (req,res)=>{
+app.put("/clothes/ :id", (req,res)=>{
   const id = parseInt(req.params.id);
   const {name,price,rating,image}=req.body;
   fs.readFile("db.json", "utf8", (err, data) => {
