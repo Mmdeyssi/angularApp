@@ -1,3 +1,4 @@
+import { PricePipe } from './../../pipes/price.pipe';
 import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { Product } from '../../../types';
 import { RatingModule } from 'primeng/rating';
@@ -6,10 +7,12 @@ import { ButtonModule } from 'primeng/button';
 import { ConfirmationService } from 'primeng/api';
 import { ConfirmPopupModule } from 'primeng/confirmpopup';
 
+import { TrucateNamePipe } from '../../pipes/trucate-name.pipe';
+
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [RatingModule , FormsModule, ButtonModule,ConfirmPopupModule],
+  imports: [RatingModule , FormsModule, ButtonModule,ConfirmPopupModule,PricePipe,TrucateNamePipe],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
   providers:[ConfirmationService]
